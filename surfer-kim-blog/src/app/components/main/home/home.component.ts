@@ -8,6 +8,6 @@ import { BannerComponent } from '../../shared/banner/banner.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  bannerTitle = 'Welcome to surfer-kim blog, where words matter.';
+  bannerTitle = 'Welcome to surfer-kim\'s blog, where words matter.';
   bannerDescription = 'I\'ll deliver the best stories and ideas on the topics you care about.'
 }
