@@ -1,0 +1,8 @@
+<div class="project-container">
+  <app-banner title="{{ bannerTitle }}" description="{{ bannerDescription }}"></app-banner>
+  <div *ngIf="projects" class="project-card-container">
+    @for (project of projects; track project.id) {
+      <app-project-card [project]=project></app-project-card>
+    }
+  </div>
+</div>

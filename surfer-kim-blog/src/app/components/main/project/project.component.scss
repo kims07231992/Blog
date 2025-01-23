@@ -1,0 +1,8 @@
+.project-container {
+  .project-card-container {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    place-items: center;
+  }
+}
