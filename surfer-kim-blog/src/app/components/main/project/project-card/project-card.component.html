@@ -1,0 +1,34 @@
+<div class="project-card-container">
+  <mat-card appearance="outlined">
+    <div *ngIf="project?.imageUrl; else imageBlock">
+      <img mat-card-image src="project.imageUrl">
+    </div>
+    <ng-template #imageBlock>
+      <img mat-card-image src="/images/default/default-project.png">
+    </ng-template>
+    
+    <mat-card-header>
+      <mat-card-title> 
+        <div *ngIf="project?.projectUrl; else linkBlock">
+          <a href="{{project?.projectUrl}}" target="_blank"> {{ project?.title }} </a>
+        </div>
+        <ng-template #linkBlock>
+            <mat-card-title> {{ project?.title }}</mat-card-title>
+        </ng-template>
+      </mat-card-title>
+      <mat-card-subtitle>{{ project?.location }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{ project?.summary }}
+      </p>
+    </mat-card-content>
+    <mat-card-footer class="project-card-tag-container">
+      <mat-chip-set>
+        <div *ngFor="let tag of project?.tags">
+          <mat-chip>{{ tag }}</mat-chip>
+        </div>
+      </mat-chip-set>
+    </mat-card-footer>
+  </mat-card>
+</div>
