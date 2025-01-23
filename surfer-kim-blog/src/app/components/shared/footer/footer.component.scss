@@ -1,0 +1,21 @@
+.footer-container {
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-primary);
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  width: 100%;
+
+  .footer-item {
+    padding: 10px 25px;
+  }
+
+  a, a:link, a:visited {
+    text-decoration: none;
+    color: #20313b;
+  }
+
+  a:hover, a:active {
+    color: #0e1112;
+  }
+}
