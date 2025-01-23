@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+
+.header-top-header {
+    position: relative;
+    padding: 10px 16px;
+
+    background: var(--mat-sys-surface);
+    @include mat.elevation(8);
+}
+  
