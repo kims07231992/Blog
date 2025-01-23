@@ -1,0 +1,19 @@
+.banner-container {
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-primary);
+  text-align: center;
+  padding: 60px;
+  font-weight: 300;
+
+  .banner-title {
+    font-size: 56px;
+    line-height: 56px;
+    margin: 15px 5px;
+  }
+
+  .banner-description {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 15px 0 25px;
+  }
+}
