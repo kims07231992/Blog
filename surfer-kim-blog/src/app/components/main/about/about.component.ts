@@ -20,10 +20,13 @@ import { BannerComponent } from '../../shared/banner/banner.component';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  public bannerTitle = 'Get In Touch';
-  public bannerDescription = 'The best is yet to come.'
-  public experiences: Career[];
-  public educations: Career[];
+  bannerTitle = 'Get In Touch';
+  bannerDescription = 'The best is yet to come.'
+  profileName = 'Jason Kim';
+  profileTitle = 'Future Pro Surfer'
+  profileLocation = 'Los Angeles Metropolitan Area';
+  experiences: Career[];
+  educations: Career[];
 
   aboutService: AboutService = inject(AboutService);
 
