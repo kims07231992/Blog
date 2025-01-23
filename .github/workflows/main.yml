@@ -54,4 +54,4 @@ jobs:
       - name: Copy to S3 Bucket
         run: |
           cd surfer-kim-blog
-          aws s3 cp ./dist/surfer-kim-blog/browser s3://${AWS_S3_URL} --recursive
+          aws s3 cp ./dist/surfer-kim-blog/browser s3://${{ secrets.AWS_S3_URL }} --recursive
