@@ -1,0 +1,74 @@
+<app-banner title="{{ bannerTitle }}" description="{{ bannerDescription }}"></app-banner>
+<div class="about-container">
+  <div class="about-profile-container">
+      <mat-card class="about-profile-content">
+        <div class="about-profile-image">
+          <img src="/images/about/jason_kim.jpg" alt="Jason Kim">
+        </div>
+        <div class="about-profile-content">
+          <h2 class="about-profile-name">
+            Jason Kim
+          </h2>
+          <h3 class="about-profile-title">
+            Future Pro Surfer
+          </h3>
+          <p class="about-profile-location">
+            Los Angeles Metropolitan Area
+          </p>
+        </div>
+      </mat-card>
+  </div>
+  <div class="about-career-container">
+    <mat-accordion>
+      <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="about-career-panel-title">
+            Experience
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          @for (experience of experiences; track experience.id) {
+            <mat-list-item class="about-career-list-item">
+              <span matListItemIcon class="about-career-image">
+                @if (experience.imageUrl) { <img src="{{experience.imageUrl}}"> }
+                @else { <img src="/images/default/default-experience.png" alt="default-experience"> }
+              </span>
+              <div matListItemTitle class="about-career-title">{{experience.title}}</div>
+              <div matListItemLine class="about-career-name">{{experience.name}}</div>
+              <div matListItemLine class="about-career-date">
+                <span>{{experience.fromDate | date:'MMM yyyy'}} - </span>
+                @if (experience.toDate) { <span>{{experience.toDate | date:'MMM yyyy'}}</span> }
+                @else { <span>Present</span> }</div>
+                <div matListItemLine class="about-career-location">{{experience.location}}</div>
+            </mat-list-item>
+          }
+          </mat-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="about-career-panel-title">
+            Education
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          @for (education of educations; track education.id) {
+            <mat-list-item class="about-career-list-item">
+              <mat-icon matListItemIcon class="about-career-image">
+                @if (education.imageUrl) { <img src="{{education.imageUrl}}"> }
+                @else { <img src="/images/default/default-education.png" alt="default-education"> }
+              </mat-icon>
+              <div matListItemTitle class="about-career-title">{{education.title}}</div>
+              <div matListItemLine class="about-career-name">{{education.name}}</div>
+              <div matListItemLine class="about-career-date">
+                <span>{{education.fromDate | date:'yyyy'}} - </span>
+                @if (education.toDate) { <span>{{education.toDate | date:'yyyy'}}</span> }
+                @else { <span>Present</span> }</div>
+                <div matListItemLine class="about-career-location">{{education.location}}</div>
+            </mat-list-item>
+          }
+          </mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
